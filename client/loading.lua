@@ -24,7 +24,7 @@ end
 function GameLoad()
 	loading = false
 end
-function Render()
+function doRender()
 	--[[ This if statement uses player position to turn the image off if the player moves.
 		 This is for when the script is loaded while players are already in the server, to prevent
 		 the image from staying on screen (GameLoad event wouldn't be called)
@@ -69,7 +69,7 @@ function LocalPlayerDeath(args) -- Create a timer on local player death so that 
 	end
 end
 
-Events:Subscribe("PostRender", Render)
+Events:Subscribe("PostRender", doRender)
 Events:Subscribe("ModuleLoad", ModuleLoad)
 Events:Subscribe("GameLoad", GameLoad)
 Events:Subscribe("LocalPlayerDeath", LocalPlayerDeath)
