@@ -39,7 +39,7 @@ function Render()
 	
 	if updated then
 		if loading then
-			theimage:Draw(Vector2(0,0), Vector2(Render.Width,Render.Height), Vector2(0,0),Vector2(1,1)) -- Draw the image
+			createdImage:Draw(Vector2(0,0), Vector2(Render.Width,Render.Height), Vector2(0,0),Vector2(1,1)) -- Draw the image
 			
 			-- Render loading text
 			local txt = "Loading"
@@ -53,9 +53,9 @@ function Render()
 				
 				-- Pcall, same as above
 				if not pcall(function()
-					theimage = Image.Create(AssetLocation.Base64, table.randomvalue(images))
+					createdImage = Image.Create(AssetLocation.Base64, table.randomvalue(images))
 				end) then
-					theimage = Image.Create(AssetLocation.Base64, table.randomvalue(images))
+					createdImage = Image.Create(AssetLocation.Base64, table.randomvalue(images))
 				end
 				t = nil -- clear timer
 			end
