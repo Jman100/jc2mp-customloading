@@ -39,7 +39,7 @@ function doRender()
 	
 	if updated then
 		if loading then
-			createdImage:Draw(Vector2(0,0), Vector2(Render.Width,Render.Height), Vector2(0,0),Vector2(1,1)) -- Draw the image
+			createdImage:Draw(Vector2.Zero, Vector2(Render.Width,Render.Height), Vector2.Zero, Vector2.One) -- Draw the image
 			
 			-- Render loading text
 			local txt = "Loading"
